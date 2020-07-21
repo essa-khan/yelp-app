@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>
+        This is the Display Results Page
+    </title>
+</head>
+
+<body>
+    Here are the top 3 businesses that got returned by Yelp
+    {% for each_business in establishments %}
+        {{ each_business }}
+    {% endfor %}
+    
+    Here is the term:
+    {% for each_term in term %}
+        {{ each_term }}
+    {% endfor %}
+    
+    Here is the location:
+    {% for each_location in location %}
+        {{ each_location }}
+    {% endfor %}
+    
+    
+    
+</body>
+</html>

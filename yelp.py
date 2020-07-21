@@ -5,7 +5,7 @@ Spyder Editor
 This is a temporary script file.
 """
 
-import requests 
+import requests, json 
     
 def search_businesses(search_term, search_location):
     
@@ -27,8 +27,27 @@ def search_businesses(search_term, search_location):
     
     businesses_dict = businesses_object.text
     
-    return businesses_dict
+    businesses_json = json.loads(businesses_dict)
+    
+    businesses_list = businesses_json["businesses"]
+      
+    return businesses_list
+
+#    # Extract the list of businesses from businesses_dict
+#    businesses_list = businesses_dict["businesses"]
+#    
+#    # Create an empty list
+#    list_of_businesses = []
+#    
+#    # Loop through list of businesses and append each business to list_of_businesses variable
+#    for each in businesses_list:
+#        list_of_businesses.append(each)
+    
+#    return list_of_businesses
+    
+    
+#    return businesses_dict
   
 # Invoke the search_businesses functions
-invoke_yelp = search_businesses("restaurants", "chicago")
-print(invoke_yelp)
+#invoke_yelp = search_businesses("restaurants", "chicago")
+#print(invoke_yelp)
