@@ -4,27 +4,26 @@
     <title>
         This is the Display Results Page
     </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
 </head>
-
+<div
 <body>
-    <h3> Here are the top 3 businesses that got returned by Yelp
-    {% for each_business in establishments %}
-        <h5><li>
-            {{ each_business.name }}
-            {{ each_business.rating }}
-            {{ each_business.display_phone }} 
-        </li></h5>
-    {% endfor %}
-    
-    Here is the term
-    {% for each_term in term %}
-        {{ each_term }}
-    {% endfor %}
-    
-    Here is the location
-    {% for each_location in location %}
-        {{ each_location }}
-    {% endfor %}
-    
+    <div class = "jumbotron">
+        <div class = "container">
+            <h3> Here are the top 5 businesses that got returned by Yelp for <br>
+            {{ term }} in {{ location }}</h3>
+            <hr><hr>        
+            
+            {% for each_business in establishments %}
+                
+                <h4><b>  Name: {{ each_business.name }} </b></h4> <br>
+                <h5>  Rating: {{ each_business.rating }} </h5> <br>
+                <h5>  Phone: {{ each_business.display_phone }} </h5> <br>
+                <h5>  Address: {{ each_business.location.display_address }} </h5> <br>
+                <hr>
+            {% endfor %}
+              
+        </div>
+    </div>
 </body>
 </html>

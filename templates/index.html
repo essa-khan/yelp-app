@@ -4,15 +4,20 @@
         <title>
             Welcome to My Yelp Clone Website
         </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
     </head>
     
     <body>
-        <h1> Welcome to my Yelp Clone Website </h1>
-
-        <form action = "/submit">
-            <input type = "text" name = "location" placeholder = "City Name">
-            <input type = "text" name = "term" placeholder = "Type of Business">
-            <input type = "submit" value = "Submit">
+        <div class = "jumbotron">
+            <div class = "container">
+                <h1> Welcome to my Yelp Clone Website </h1>
+                                
+                <form action = "/submit">
+                    <input type="text" name="location" placeholder="City Name">
+                    <input type="text" name="term" placeholder="Type of Business">
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
     </body>
-    
 </html>
