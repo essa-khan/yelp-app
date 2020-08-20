@@ -6,20 +6,37 @@
     </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
 </head>
-<div
+    <style>
+    h1 {text-align: center;}
+    h1 { color: #d32323; }
+    h1 { font-family: "Helvetica Rounded"; font-size: 50px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+    h3 {text-align: center;}
+    h3 { color: #d32323; }
+    h3 { font-family: "Helvetica Rounded"; font-size: 25px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+
+    h5 {text-align: center;}
+    
+    p {text-align: center;}
+    div {text-align: center;}
+    </style>
 <body>
     <div class = "jumbotron">
         <div class = "container">
-            <h3> Here are the top 5 businesses that got returned by Yelp for <br>
-            {{ term }} in {{ location }}</h3>
-            <hr><hr>        
+            <h1> Yelper </h1>
+            <br /> 
+            <h3> Top 5 businesses for {{ term }} in {{ location }}</h3>
+            <hr>       
             
             {% for each_business in establishments %}
-                
-                <h4><b>  Name: {{ each_business.name }} </b></h4> <br>
-                <h5>  Rating: {{ each_business.rating }} </h5> <br>
-                <h5>  Phone: {{ each_business.display_phone }} </h5> <br>
-                <h5>  Address: {{ each_business.location.display_address }} </h5> <br>
+                <img src={{ each_business.image_url }} class="img-thumbnail" alt="Image Not Available" width="400" height="400"> 
+                <br />
+                <br />
+                <h5><b>  {{ each_business.name }} </b></h5> <br>
+                <h5>  &#x2B50 Rating: {{ each_business.rating }} </h5> <br>
+                <h5>  &#x1F4AC Reviews: {{ each_business.review_count }} </h5> <br>
+                <h5>  &#x1F4B2 Price: {{ each_business.price }} </h5> <br>
+                <h5>  &#x1F4DE Phone: {{ each_business.display_phone }} </h5> <br>
+                <h5>  &#x1F4CD Address: {{ each_business.location.display_address }} </h5> <br>
                 <hr>
             {% endfor %}
               

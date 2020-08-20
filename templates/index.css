@@ -1,0 +1,85 @@
+body {
+  height: 100%;
+}
+
+input {
+  font-size: 10px;
+}
+
+.background {
+  /* The image used */
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+ 
+.container {
+	text-align: center;
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+ 
+  
+.fill-two {
+	position: absolute;
+	background-image: linear-gradient(to right, #E040FB, #00BCD4);
+	background-size: 150% 150%;
+	height: 70px;
+	width: 420px;
+	border-radius: 5px;
+	margin: -40px 0 0 -140px;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+  
+.container-two:hover .fill-two {
+	-webkit-animation: gradient 3s ease infinite;
+	-moz-animation: gradient 3s ease infinite;
+	animation: gradient 3s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-moz-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+}
