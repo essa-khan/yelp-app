@@ -1,6 +1,6 @@
 # yelp-app
 
-A clone version of Yelp's business search API. The user will be able to search businessess with its location and type to retrieve the top 5 businesses based on the reviews, ratings and prices. 
+A clone version of Yelp's business search API. The user will be able to search businesses with its location and type to retrieve the top 5 businesses based on the reviews, ratings and prices. 
 
 # Yelp Clone Web App Demo
 
